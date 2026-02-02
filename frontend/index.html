@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto
+    &family=Montserrat:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Panta-rei</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <header>
+      <div>
+        <img
+          src="Photos/550660547_18325733284229488_6626209731370368057_n.jpg"
+          alt="Logo"
+          class="logo"
+        />
+      </div>
+      <div class="button-header">
+        <button>Zakazivanje</button>
+        <button>Kontakt</button>
+        <button>Galerija</button>
+        <button>Cenovnik</button>
+      </div>
+      <div class="ikonica">
+        <a href="https://www.instagram.com/pantarei_barbershop/">
+          <img src="Photos/icons8-instagram-48.png" alt="instagram" />
+        </a>
+      </div>
+    </header>
+
+    <section class="cenovnik">
+      <h2>Cenovnik</h2>
+      <div>
+        <table>
+          <tr>
+            <th>Usluga</th>
+            <th>Cena</th>
+          </tr>
+          <tr>
+            <td>Šišanje</td>
+            <td>1000 RSD</td>
+          </tr>
+          <tr>
+            <td>Brijanje</td>
+            <td>800 RSD</td>
+          </tr>
+          <tr>
+            <td>Boja za kosu</td>
+            <td>3000 RSD</td>
+          </tr>
+          <tr>
+            <td>Feniranje</td>
+            <td>1200 RSD</td>
+          </tr>
+        </table>
+      </div>
+    </section>
+
+    <section class="galerija">
+      <h2>Galerija</h2>
+      <div class="slike-galerija">
+        <img src="Photos/Slika 1.png" alt="Frizura 1" />
+        <img src="Photos/Slika 2.png" alt="Frizura 2" />
+        <img src="Photos/Slika 3.png" alt="Frizura 3" />
+        <img src="Photos/Slika 4.png" alt="Frizura 4" />
+      </div>
+    </section>
+
+    <button class="backtotop">↑</button>
+
+    <script>
+      function scrollToSection(id) {
+        document.getElementById(id).scrollIntoView({
+          behavior: "smooth",
+        });
+      }
+    </script>
+  </body>
+</html>
