@@ -10,6 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Panta-rei</title>
     <link rel="stylesheet" href="index.css" />
+    <script src="script.js" defer></script>
   </head>
   <body>
     <header>
@@ -71,14 +72,69 @@
       </div>
     </section>
 
-    <button class="backtotop">↑</button>
+    <section class="zakazivanje">
+      <h2>Zakazivanje</h2>
+      <form>
+        <label for="dan">Izaberi dan:</label>
+        <select id="dan" name="dan">
+          <option value="ponedeljak">Ponedeljak</option>
+          <option value="utorak">Utorak</option>
+          <option value="sreda">Sreda</option>
+          <option value="cetvrtak">Četvrtak</option>
+          <option value="petak">Petak</option>
+          <option value="subota">Subota</option>
+        </select>
 
-    <script>
-      function scrollToSection(id) {
-        document.getElementById(id).scrollIntoView({
-          behavior: "smooth",
-        });
-      }
-    </script>
+        <div class="termini">
+          <button type="button">10:00</button>
+          <button type="button">11:00</button>
+          <button type="button">12:00</button>
+          <button type="button">13:00</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="kontakt">
+      <div class="kontakt-forma">
+        <h1>Stupimo u kontakt!</h1>
+        <h2>Vaši podaci</h2>
+        <form>
+          <label for="ime">Ime:</label>
+          <input type="text" id="ime" name="ime" required />
+
+          <label for="prezime">Prezime:</label>
+          <input type="text" id="prezime" name="prezime" required />
+
+          <label for="email">Mejl adresa:</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="poruka">Poruka:</label>
+          <textarea id="poruka" name="poruka"></textarea>
+
+          <button type="submit">Pošalji</button>
+        </form>
+      </div>
+
+      <div class="kontakt-info">
+        <h2>Informacije</h2>
+        <p>Adresa: Pasterova 24, Novi Sad, Serbia 21000</p>
+        <p>Telefon: Srdjan Pantić 0607662794</p>
+        <p>Radno vreme: Utorak - Petak 11h-19h Subota 11h-17h</p>
+        <p>Instagram: @pantarei_barbershop</p>
+        <p>E-mail: srdjanpntc@gmail.com</p>
+      </div>
+    </section>
+
+    <button class="backtotop">↑</button>
+    <div id="rezervacijaModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Pregled rezervacije</h2>
+        <p>Usluga: Šišanje</p>
+        <p>Frizer:</p>
+        <p>Datum i vreme: 04/02/2026 17:30h</p>
+        <button>Zakaži</button>
+      </div>
+    </div>
   </body>
 </html>

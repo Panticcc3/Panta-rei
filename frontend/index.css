@@ -118,7 +118,7 @@ header .button-header {
 .galerija {
   padding: 20px;
   background-color: #2e2d2d;
-  margin: 20px;
+  margin: 60px 20px;
   border-radius: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   text-align: center;
@@ -131,11 +131,306 @@ header .button-header {
 }
 
 .galerija img {
-  width: 100%;
+  width: 60%;
+  margin: 0 auto;
   border-radius: 8px;
   transition: transform 0.3s ease;
 }
 
 .galerija img:hover {
   transform: scale(1.05); /* lagani zoom efekat */
+}
+
+/* ZAKAZIVANJE */
+
+.zakazivanje {
+  padding: 40px;
+  text-align: center;
+  background-color: #2e2d2d;
+  margin: 60px 20px;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.zakazivanje h2 {
+  margin-bottom: 20px;
+  color: #f5f5dc;
+  font-family: "Montserrat", sans-serif;
+}
+
+.zakazivanje form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.zakazivanje select {
+  padding: 10px;
+  border: 2px solid #ffd700;
+  border-radius: 6px;
+  background-color: #2e2d2d;
+  color: #ffd700;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+}
+
+.termini {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 kolone */
+  gap: 15px;
+}
+
+.termini button {
+  background-color: #ffd700;
+  color: #3a3838;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.termini button:hover {
+  background-color: #f5f5dc;
+  transform: scale(1.05);
+}
+
+.zakazivanje button[type="submit"] {
+  background-color: #ffd700;
+  color: #3a3838;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.zakazivanje button[type="submit"]:hover {
+  background-color: #f5f5dc;
+  transform: scale(1.05);
+}
+
+/* MODUL */
+
+.modal {
+  display: none; /* skriven dok se ne pozove */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* tamna pozadina */
+}
+
+.modal-content {
+  background-color: #2e2d2d;
+  margin: 10% auto;
+  padding: 20px;
+  border: 2px solid #ffd700;
+  border-radius: 8px;
+  width: 400px;
+  color: #ffd700;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+}
+
+.modal-content button {
+  background-color: #ffd700;
+  color: #3a3838;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.modal-content button:hover {
+  background-color: #f5f5dc;
+  transform: scale(1.05);
+}
+
+.close {
+  float: right;
+  font-size: 24px;
+  cursor: pointer;
+  color: #ffd700;
+}
+
+/* KONTAKT */
+
+.kontakt {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 40px;
+  background-color: #2e2d2d;
+  color: #ffd700;
+}
+
+.kontakt-forma,
+.kontakt-info {
+  flex: 1;
+}
+
+.kontakt-forma h2,
+.kontakt-info h2 {
+  margin-bottom: 20px;
+  color: #f5f5dc;
+  font-family: "Montserrat", sans-serif;
+}
+
+.kontakt-forma form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.kontakt-forma input,
+.kontakt-forma textarea {
+  padding: 10px;
+  border: 2px solid #ffd700;
+  border-radius: 6px;
+  background-color: #3a3838;
+  color: #ffd700;
+  font-family: "Roboto", sans-serif;
+}
+
+.kontakt-forma button {
+  background-color: #ffd700;
+  color: #3a3838;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.kontakt-forma button:hover {
+  background-color: #f5f5dc;
+  transform: scale(1.05);
+}
+
+.kontakt-info p {
+  margin: 10px 0;
+  font-family: "Roboto", sans-serif;
+}
+
+/* MEDIA */
+
+/* TABLET */
+@media (max-width: 1024px) {
+  header {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  header .logo {
+    height: 80px;
+  }
+
+  header .ikonica img {
+    height: 50px;
+  }
+
+  .galerija .slike-galerija {
+    grid-template-columns: 1fr; /* slike u jednu kolonu */
+  }
+
+  .termini {
+    grid-template-columns: 1fr; /* termini u jednu kolonu */
+  }
+
+  .kontakt {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* MOBILNI TELEFON */
+@media (max-width: 600px) {
+  body {
+    font-size: 14px;
+  }
+
+  header {
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px;
+  }
+
+  header .logo {
+    height: 60px;
+  }
+
+  header .ikonica img {
+    height: 40px;
+  }
+
+  .button-header {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .cenovnik {
+    font-size: 16px;
+    margin: 10px;
+    padding: 10px;
+  }
+
+  .cenovnik th,
+  .cenovnik td {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .galerija {
+    margin: 20px 10px;
+    padding: 20px;
+  }
+
+  .galerija img {
+    width: 100%; /* slike pune širine na mobilnom */
+  }
+
+  .zakazivanje {
+    margin: 20px 10px;
+    padding: 20px;
+  }
+
+  .termini {
+    grid-template-columns: 1fr; /* termini jedan ispod drugog */
+  }
+
+  .modal-content {
+    width: 90%; /* modal skoro cela širina ekrana */
+    margin: 30% auto;
+  }
+
+  .kontakt {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .kontakt-forma input,
+  .kontakt-forma textarea {
+    font-size: 14px;
+  }
+
+  .kontakt-forma button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
 }
